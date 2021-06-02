@@ -1,0 +1,7 @@
+EXT=json
+for i in ../../data/raw/tweets/split/*.${EXT}; do
+    echo "Split $i"
+    python park_split_s.py "$i"
+done
+
+

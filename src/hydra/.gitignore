@@ -1,0 +1,5 @@
+log/
+shapes/
+tweets/
+*.script
+*.o*

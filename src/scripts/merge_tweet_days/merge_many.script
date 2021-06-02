@@ -1,0 +1,20 @@
+# Job on the shortq
+#This job needs 1 compute node with 1 processor per node.
+#PBS -l nodes=1:ppn=1
+# It should be allowed to run for up to 1 hours.
+#PBS -l walltime=12:00:00
+# Name of job.
+#PBS -N merge_many
+# Join STDERR TO STDOUT.  (omit this if you want separate STDOUT AND STDERR)
+#PBS -j oe
+
+cd /users/a/s/aschwa15/twitter/multipark_tweets/src/scripts
+python merge_files.py CO_Denver_0820000 &&
+python merge_files.py IN_Indianapolis_1836003 &&
+python merge_files.py MD_Baltimore_2404000 &&
+python merge_files.py MI_Detroit_2622000 &&
+python merge_files.py NC_Charlotte_3712000 &&
+python merge_files.py OH_Columbus_3918000 &&
+python merge_files.py TN_Memphis_4748000 &&
+python merge_files.py TX_El_Paso_4824000 &&
+python merge_files.py TX_Fort_Worth_4827000

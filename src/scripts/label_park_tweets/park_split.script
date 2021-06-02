@@ -1,0 +1,14 @@
+# Job on the shortq
+#This job needs 1 compute node with 1 processor per node.
+#PBS -l nodes=1:ppn=1
+# It should be allowed to run for up to 1 hours.
+#PBS -l walltime=12:00:00
+# Name of job.
+#PBS -N split_test
+# Join STDERR TO STDOUT.  (omit this if you want separate STDOUT AND STDERR)
+#PBS -j oe
+
+echo "finding tweets in parks"
+cd /users/a/s/aschwa15/twitter/multipark_tweets/src/scripts
+python park_split.py OH_ClevelandTest_3916000.json
+echo "finish tweets in parks"
