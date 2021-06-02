@@ -1,4 +1,4 @@
-multipark_tweets
+Happy City Tweets
 ==============================
 
 Comparing in and out of park tweets across cities for health/sentiment outcomes.
@@ -7,7 +7,7 @@ Includes code to pull tweets from UVM Storylab Mongodb database AKA hydra, proce
 
 Also includes notebooks to produce plots, summary tables, and visualizations of relevant results.
 
-Data is excluded from repository.
+Data, outputs is excluded from repository.
 
 Project Organization
 ------------
